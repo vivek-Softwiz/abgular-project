@@ -35,10 +35,10 @@ jobs:
           ${{ runner.os }}-
     - name: Install Dependencies
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-      run: npm install
+      run: npm ci
       
     - name: Build
-      run: npm build
+      run: npm run build:ci
       
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
