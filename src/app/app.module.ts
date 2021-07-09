@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComComponent } from './com/com.component';
+import { ComdComponent } from './comd/comd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComComponent
+    ComComponent,
+    ComdComponent
   ],
   imports: [
     BrowserModule,
