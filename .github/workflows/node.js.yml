@@ -37,6 +37,8 @@ jobs:
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
       run: npm install
       
+    - run: npm run build:ci
+      
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
 #       with:
@@ -45,5 +47,5 @@ jobs:
         
 #     - name: Install NPM dependencies
 #       run: npm install
-#     - run: npm run build:ci
+     
    
