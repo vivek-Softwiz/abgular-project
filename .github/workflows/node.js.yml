@@ -21,12 +21,11 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
             
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
